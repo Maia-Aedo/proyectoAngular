@@ -12,6 +12,12 @@ import { ActividadesComponent } from './pages/actividades/actividades.component'
 import { PaquetesComponent } from './pages/paquetes/paquetes.component';
 import { SegurosComponent } from './pages/seguros/seguros.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
+import { MaterialModule } from './material/material.module';
+import { ComponentsModule } from './components/components.module';
+import { CalendarioComponent } from './components/calendario.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatNativeDateModule } from '@angular/material/core';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,14 +29,21 @@ import { AboutUsComponent } from './pages/about-us/about-us.component';
     ActividadesComponent,
     PaquetesComponent,
     SegurosComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    DatepickerOverviewExample
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    MaterialModule,
+    ComponentsModule,
+    MaterialModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent,
+    CalendarioComponent
+  ]
 })
 export class AppModule { }
