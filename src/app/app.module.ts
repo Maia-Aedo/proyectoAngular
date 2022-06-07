@@ -14,7 +14,8 @@ import { SegurosComponent } from './pages/seguros/seguros.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { MaterialModule } from './material/material.module';
 import { ComponentsModule } from './components/components.module';
-import { CalendarioComponent } from './components/calendario.component';
+import { CalendarioComponent } from './components/calendario/calendario.component';
+import { MaterialExampleModule } from '../material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatNativeDateModule } from '@angular/material/core';
 import { HttpClientModule } from '@angular/common/http';
@@ -30,7 +31,7 @@ import { HttpClientModule } from '@angular/common/http';
     PaquetesComponent,
     SegurosComponent,
     AboutUsComponent,
-    DatepickerOverviewExample
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -38,12 +39,18 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     MaterialModule,
     ComponentsModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule,
+    HttpClientModule,
+    MatNativeDateModule,
+    MaterialExampleModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [
     AppComponent,
-    CalendarioComponent
+    CalendarioComponent,
+    NavbarComponent
   ]
 })
 export class AppModule { }
